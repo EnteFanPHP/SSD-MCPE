@@ -13,6 +13,14 @@
 4. mkdir
 5. Java (for )
 
+| Command  | Download link |
+| ------------- | ------------- |
+| wget  | pkg install wget  |
+| php   | pkg install php   |
+| git   | pkg install git   |
+| mkdir | +                 |
+| java (for Nukkit / CloudburtstMC) |   |
+
 # Special thanks to:
 | Name  | Github link |
 | ------------- | ------------- |
