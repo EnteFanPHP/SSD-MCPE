@@ -16,4 +16,4 @@
 # Special thanks to:
 | Name  | Github link |
 | ------------- | ------------- |
-| Content Cell  | Content Cell  |
+| DaisukeDaisuke  | https://github.com/DaisukeDaisuke/  |
