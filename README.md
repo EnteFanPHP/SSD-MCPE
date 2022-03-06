@@ -11,6 +11,9 @@
 2. php
 3. git
 4. mkdir
+5. Java (for )
 
 # Special thanks to:
-
+| Name  | Github link |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
