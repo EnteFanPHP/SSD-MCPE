@@ -15,11 +15,11 @@
 
 | Command  | Download link |
 | ------------- | ------------- |
-| wget  | pkg install wget  |
-| php   | pkg install php   |
-| git   | pkg install git   |
-| mkdir | +                 |
-| java (for Nukkit / CloudburtstMC) |   |
+| wget (CloudburstMC / PocketMine-MP)  | pkg install wget  |
+| php  (Pocketmine-MP) | pkg install php   |
+| git  (CloudburstMC / PocketMine-MP) | pkg install git   |
+| mkdir (CloudburstMC / PocketMine-MP) | +                 |
+| java (for Nukkit / CloudburtstMC) |  https://github.com/MasterDevX/Termux-Java |
 
 # Special thanks to:
 | Name  | Github link |
