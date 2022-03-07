@@ -1,4 +1,4 @@
-# Minecraft-BE-server-software-downloader
+# Minecraft-BE-Server-Software-Downloader
 
  This downloader will help you download Minecraft Bedrock softwares more easily</br>
  If you are using termux (Android) and you want to run / install Cloudburst / Nukkit you need to type: **termux-chroot**
