@@ -6,8 +6,9 @@
 # How to download ⤵️
 
 1. Open your Linux Console or Termux (on Android)
-2. Type: __wget https://github.com/EnteFanPHP/Minecraft-BE-Server-Software-Downloader/blob/main/download.php__
-3. To run this file type: **php download.php**
+2. Download the Latest or your releas what you want
+3. unzip the File: unzip Downloader.zip
+4. To run this file type: **php download.php**
 
 # Commands what are used in the script:
 
