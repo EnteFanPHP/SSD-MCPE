@@ -37,54 +37,53 @@ class PocketMineDownloader implements Downloader {
     public const POCKETMINE_GITHUB = "https://github.com/pmmp/PocketMine-MP/";
 
     public const LATEST_RELEAS_PHAR = "https://github.com/pmmp/PocketMine-MP/releases/latest/download/PocketMine-MP.phar";
-    //Special thanks to DaisukeDaisuke with 
+    //Special thanks to DaisukeDaisuke
     public const LATEST_PHP_BINARY = "https://github.com/DaisukeDaisuke/AndroidPHP/releases/latest/download/php";
 
     public function process():void {
         $git = shell_exec("git clone ".PocketMineDownloader::POCKETMINE_GITHUB);
 
-        if ($git == true)echo("PocketMine-MP file cloned downloaded..\n");
+        if ($git == true)echo("\033[1;32mDownloaded PocketMine MP file cloned.\033[0m\n");
         sleep(1);
 
         chdir("PocketMine-MP");
         shell_exec("chmod +x start.sh");
         sleep(1);
-        echo("Downloading PocketMine-MP.phar file!\n");
         shell_exec("wget ".PocketMineDownloader::LATEST_RELEAS_PHAR);
         sleep(1);
-        echo("Creating bin files..\n");
         shell_exec("mkdir -p bin/php7/bin");
         chdir("bin/php7/bin");
 
-        echo("Downloading PHP BINARY\n");
         $binary = shell_exec("wget ".PocketMineDownloader::LATEST_PHP_BINARY);
         shell_exec("chmod +x php");
 
-        echo("Run ./start.sh\n");
-        echo("Bye! Have fun!\n");
-        echo("This file will delete automaticly!\n");
+        echo("\033[1;32mRun ./start.sh\033[0m\n");
+        echo("\033[1;32mBye! Have fun!\033[0m\n");
+        echo("\033[1;32mThis file will delete automaticly!\033[0m\n");
         chdir("../../../../");
         unlink(self::FILE_NAME);
         exit();
     }
 }
-
+system("clear");
+print_logo();
 checkWich();
 
 function checkWich() : bool {
     if (stristr(PHP_OS, "LINUX")) {
-        echo("If you are using Termux you need to run termux-chroot!\n");
+        echo("\033[0;31mIf you use Termux, you must run termux-chroot!\033[0m\n");
     }
-    $WHICH_SERVER = "What do you want do download: \n (1): Nukkit (2): PocketMine-MP\n > ";
+    $WHICH_SERVER = "What do you want to do download: \n(1): Nukkit (2): PocketMine-MP\n > ";
     $what = readline($WHICH_SERVER);
     if (!is_int(intval($what))) {
-        echo ("The choice must be an integer!\n");
+        echo ("The choice must be a number!\n");
         return false;
     }
-
+    
+    system("clear");
     switch ($what) {
         case 1:
-            echo("Downloading Nukkit (latest)..! \n");
+            echo("Downloading Nukkit (latest)..!\n");
             $nukkit = new NukkitDownloader();
             $nukkit->process();
             break;
@@ -97,4 +96,15 @@ function checkWich() : bool {
     }
     return true;
 
+}
+
+function print_logo() {
+    echo("\033[1;34m
+           _____ _____ _____             __  __ \n
+          / ____/ ____|  __ \           /_ |/_ |\n
+         | (___| (___ | |  | |     __   _| | | |\n
+          \___ \\___ \| |  | |     \ \ / / | | |\n
+          ____) |___) | |__| |      \ V /| | | |\n
+         |_____/_____/|_____/        \_/ |_(_)_|\n  
+   \033[0m\n");
 }
